@@ -1,18 +1,23 @@
 import logo from "./logo.svg";
 import "./App.css";
-import "./app-wrapper.css";
-import Header from "./Components/Header";
-import Nav from "./Components/Nav";
-import Content from "./Components/Content";
+import Header from "./Header/Header";
+import Nav from "./Nav/Nav";
+import Content from "./Content/Content";
+import Dialogs from "./Content/Dialogs/Dialogs";
+import {BrowserRouter, Route} from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Nav />
-      <Content />
-       
-    </div>
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <Nav />
+        <div>
+          <Route path="/Profile" component={Content} />
+          <Route path="/dialogs" component={Dialogs} />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 };
 

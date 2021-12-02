@@ -1,0 +1,10 @@
+.dialogs {
+    background-color: rgb(110, 79, 100);
+    color: white;
+    padding: 20px;
+    display: grid;
+}
+
+.h1 {
+    margin: 0px;
+}
