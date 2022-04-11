@@ -1,0 +1,16 @@
+.addPost {
+    display: flex;
+}
+
+.btn {
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 25px;
+    border: 1px black;
+    border-radius: 2px;
+}
+
+.input {
+    height: 25px;
+}

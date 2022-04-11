@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header/Header";
 import Nav from "./Nav/Nav";
-import Content from "./Content/Content";
-import Dialogs from "./Content/Dialogs/Dialogs";
+import Content from "./Content/Content.jsx";
+import UsersContainer from "./Users/UsersContainer";
+import DialogsContainer from "./Content/Dialogs/DialogsContainer"
 import {BrowserRouter, Route} from "react-router-dom";
 
 const App = (props) => {
@@ -13,8 +13,9 @@ const App = (props) => {
         <Header />
         <Nav />
         <div>
-          <Route path="/Profile" component={Content} />
-          <Route path="/dialogs" component={Dialogs} />
+          <Route path="/profile" render={ () => <Content/>}/>
+          <Route path="/dialogs" render={ () => <DialogsContainer/>} />
+          <Route path="/users" render={ () => <UsersContainer/>}/>
         </div>
       </div>
     </BrowserRouter>

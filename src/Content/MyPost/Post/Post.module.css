@@ -10,3 +10,12 @@
     background-color: rgba(255, 255, 255, 0.424);
     border-radius: 10px;
 }
+
+.post {
+    display: flex;
+}
+
+.likes {
+    margin-left: auto;
+    padding-right: 10px;
+}
